@@ -5,18 +5,16 @@ var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m"
 var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var specialChar = ['!', "@", "#", "$", "%", "^", "&", "*", "+", "?"];
 // Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+function writePassword(password) {
+var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-  password = [lowerCase, upperCase, numbers, specialChar];
 
   
 };
 
 //function to validate password length
-var length= parseInt; 
+var length;
 function validatePass() {
 
   length = parseInt(
@@ -48,20 +46,15 @@ var passChar = upperCase.concat(lowerCase,numbers,specialChar);
   
   };
 //value from prompt that asks them for how many characters their password should be.
-var passwordArr = [];
-for (var i = 0; i <Length; i++) {
-    passwordArr[i]=ranPass();
- }
+
   function generatePassword () {
-    
-
-    
   validatePass();
-  ranPass();
-  alert(passwordAr);
-    
-
+  var passwordArr = [];
+  for (var i = 0; i < length; i++) {
+      passwordArr[i]=ranPass();
   }
-  console.log(generatePassword());
+  writePassword(passwordArr);
+}
+  //console.log(generatePassword());
 // Add event listener to generate button
-//  generateBtn.addEventListener("click", generatePassword());
+ generateBtn.addEventListener("click", generatePassword());
