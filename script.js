@@ -4,8 +4,6 @@ var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M"
 var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var specialChar = ['!', "@", "#", "$", "%", "^", "&", "*", "+", "?"];
-
-
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -18,13 +16,13 @@ function writePassword() {
 };
 
 //function to validate password length
+var length= parseInt; 
 function validatePass() {
 
-  var length = parseInt(
+  length = parseInt(
     prompt("how many characters would you like your password to contain")
   );
-  
-  
+
   if ((parseInt(length) < 8) || (parseInt(length) > 50)) {
     prompt("Please select between 8 and 50 characters")
 
@@ -50,19 +48,20 @@ var passChar = upperCase.concat(lowerCase,numbers,specialChar);
   
   };
 //value from prompt that asks them for how many characters their password should be.
-var passwordLength = parseInt(prompt("How many characters?"));
-var passwordArr = []; 
- for (var i = 0; i < passwordLength; i++) {
+var passwordArr = [];
+for (var i = 0; i <Length; i++) {
     passwordArr[i]=ranPass();
  }
   function generatePassword () {
     
-    includeChar();
-    alert(passwordArr);
+
+    
+  validatePass();
+  ranPass();
+  alert(passwordAr);
     
 
   }
-
-
+  console.log(generatePassword());
 // Add event listener to generate button
- generateBtn.addEventListener("click", generatePassword());
+//  generateBtn.addEventListener("click", generatePassword());
